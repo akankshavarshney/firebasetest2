@@ -1,0 +1,83 @@
+{
+  "id": "de5c104a-ec03-47da-b737-621d88bc2af3",
+  "name": "showallbooking",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "bookhotel",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "affba0b9-55f7-4acc-944d-017dd8e20cbe",
+          "required": true,
+          "dataType": "@sys.given-name",
+          "name": "given-name",
+          "value": "$given-name",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "what is your name"
+            },
+            {
+              "lang": "en",
+              "value": "let me know your name"
+            },
+            {
+              "lang": "en",
+              "value": "please tell me your name"
+            }
+          ],
+          "isList": false
+        },
+        {
+          "id": "381f187a-26b6-4c7e-b90d-9222753fb250",
+          "required": true,
+          "dataType": "@sys.number",
+          "name": "number",
+          "value": "$number",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "How many persons ?"
+            },
+            {
+              "lang": "en",
+              "value": "number of rooms required"
+            }
+          ],
+          "isList": false
+        },
+        {
+          "id": "a59d31e2-0514-493a-a416-93d422be3c59",
+          "required": true,
+          "dataType": "@sys.email",
+          "name": "email",
+          "value": "$email",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "Please tell me your Email address"
+            }
+          ],
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "$given-name , Your hotel booking for $number request is forwaded"
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}
